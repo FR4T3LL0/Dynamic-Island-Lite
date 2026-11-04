@@ -1,0 +1,15 @@
+[package]
+name = "island-win"
+version = "1.0.0-alpha.4"
+edition = "2021"
+[dependencies]
+island-core = { path = "../island-core" }
+serde.workspace = true
+serde_json.workspace = true
+sha2.workspace = true
+png = "=0.18.1"
+base64 = "=0.23.1"
+[target.'cfg(windows)'.dependencies]
+windows = { workspace = true, features = ["ApplicationModel", "Win32_System_WinRT", "Win32_Graphics_Imaging", "Win32_System_SystemInformation", "Win32_Graphics_Dwm", "Win32_UI_HiDpi", "Win32_System_Pipes", "Win32_System_IO", "Win32_Security_Authorization", "Win32_System_Power", "Win32_System_WindowsProgramming", "Win32_System_SystemServices", "Win32_UI_Shell_Common", "Win32_UI_Input_KeyboardAndMouse", "Win32_Storage_Xps", "Wdk_Foundation", "Wdk_Storage_FileSystem"] }
+windows-core.workspace = true
+windows-future.workspace = true

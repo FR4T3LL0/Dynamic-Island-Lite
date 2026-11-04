@@ -1,0 +1,12 @@
+node_modules/
+/dist/
+src-tauri/target/
+src-tauri/gen/
+docs/evidence/
+artifacts/
+*.log
+.vite/
+.cache/
+.env
+.env.*
+!.env.example

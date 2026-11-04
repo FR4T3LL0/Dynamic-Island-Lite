@@ -1,0 +1,18 @@
+{
+  "package": "Microsoft.Web.WebView2",
+  "version": "1.0.3800.47",
+  "packageUrl": "https://www.nuget.org/api/v2/package/Microsoft.Web.WebView2/1.0.3800.47",
+  "packagePage": "https://www.nuget.org/packages/Microsoft.Web.WebView2/1.0.3800.47",
+  "packageSha256": "56c9f26bdd07916a2d1949fb58a5c7e434dfa1173577dca879206050c4e718db",
+  "licenseUrl": "https://www.nuget.org/packages/Microsoft.Web.WebView2/1.0.3800.47/License",
+  "crate": "webview2-com-sys",
+  "crateVersion": "0.39.1",
+  "upstreamRevision": "edc2caf886175ccaebe86078c9cfe1ae2a187328",
+  "versionDeclaration": "https://github.com/wravery/webview2-rs/blob/edc2caf886175ccaebe86078c9cfe1ae2a187328/crates/update-bindings/src/main.rs",
+  "staticLinkDeclaration": "webview2-com-sys 0.39.1 src/lib.rs target_env=msvc link(WebView2LoaderStatic, static)",
+  "archiveEntry": "build/native/x64/WebView2LoaderStatic.lib",
+  "loaderSha256": "89c6b872783b8f6c3cedbff618adb42082d455c615453ae10cfc753f1e8f25d8",
+  "loaderBytes": 10500472,
+  "loaderBytesEqual": true,
+  "scope": "Only the x64 static loader is linked. Complete SDK LICENSE and NOTICE are supplied conservatively; the full Evergreen Runtime is external. No downloaded executable or library was executed."
+}

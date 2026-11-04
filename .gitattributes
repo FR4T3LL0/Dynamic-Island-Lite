@@ -1,0 +1,4 @@
+# Preserve the bytes verified by the license inventory.
+/package-lock.json -text
+/src-tauri/Cargo.lock -text
+/src-tauri/windows/third-party/** -text

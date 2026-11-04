@@ -1,0 +1,346 @@
+/* Shared containment for the real WebView and the labelled browser preview. */
+.native-host .island {
+  border-radius: min(24px, 50vh);
+}
+.native-host .island.compact {
+  border-radius: min(18px, 50vh);
+}
+.native-host .island.notch {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.native-host .island.compact .compact-content {
+  height: 36px;
+}
+.native-host.has-activity-bubbles {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+.native-host.has-activity-bubbles .island.compact {
+  flex: 1;
+  min-width: 0;
+}
+.activity-bubble.icon-button {
+  flex: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--surface);
+}
+.activity-bubble.icon-button:hover {
+  color: var(--accent);
+}
+.activity-bubble.icon-button:focus-visible {
+  outline-offset: -4px;
+}
+.preview-host.has-activity-bubbles .island.compact {
+  max-width: max(1px, calc(100vw - 120px));
+  transition: none;
+}
+.preview-host .activity-bubble {
+  position: absolute;
+  top: var(--top-gap);
+}
+.preview-host .media-bubble {
+  left: calc(50% + min(var(--compact-width) / 2, 50% - 60px) + 8px);
+}
+.island-launcher {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.island-launcher > button {
+  flex: 1;
+  min-width: 0;
+}
+.island-launcher:has(.activity-links) .compact-content {
+  padding-inline: 10px 4px;
+  gap: 4px;
+}
+.activity-links {
+  display: flex;
+  flex: none;
+  gap: 3px;
+  padding-right: 7px;
+}
+.activity-links > button {
+  min-width: 32px;
+  min-height: 28px;
+  height: 28px;
+  padding: 0 5px;
+  font-variant-numeric: tabular-nums;
+}
+.activity-timer {
+  color: var(--accent);
+}
+.visualizer-bars {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  align-self: center;
+  gap: 2px;
+  height: 16px;
+  color: var(--visualizer-tint, #f5f5f7);
+}
+.island-launcher .visualizer-bars,
+.media-bubble .visualizer-bars {
+  height: 15px;
+}
+.visualizer-bars i {
+  width: 2px;
+  height: 100%;
+  border-radius: 999px;
+  background: currentColor;
+  transition: transform 90ms ease-out, color 180ms ease-out;
+}
+.compact-content .album-placeholder,
+.activity-links .album-placeholder {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+}
+.island-launcher .album-placeholder img { object-fit: cover; }
+.island-launcher .album-placeholder svg { width: 12px; height: 12px; margin: 0; color: inherit; }
+.compact .media-visualizer-link {
+  border-color: transparent;
+  background: transparent;
+}
+.compact .media-visualizer-link:hover,
+.compact:has(.media-visualizer-link) .compact-content:hover {
+  background: #ffffff0a;
+}
+.activity-links > button:focus-visible {
+  outline-offset: -2px;
+}
+html[data-host=native][data-shell-motion] .island.open button,
+html[data-host=native][data-shell-motion] .island.open input,
+html[data-host=native][data-shell-motion] .island.open select {
+  pointer-events: none;
+}
+html[data-host=native][data-shell-motion] .island.open .panel-body {
+  animation: shell-content 145ms 22ms ease-out both;
+}
+.island.open .panel-body { animation: shell-content 145ms ease-out both; }
+@keyframes shell-content {
+  from { opacity: 0; transform: translateY(-3px); }
+  to { opacity: 1; transform: none; }
+}
+.preview-host {
+  display: flex;
+  flex-direction: column;
+}
+.preview-host .island {
+  flex-shrink: 0;
+  max-width: calc(100vw - 32px);
+  max-height: max(36px, calc(100dvh - var(--top-gap) - 12px));
+  transition-duration: 180ms;
+}
+.preview-host .island.open,
+.preview-host .island.preview {
+  transition-duration: 220ms;
+}
+.module-scroll { overflow: clip; padding-bottom: 6px; }
+.media-view .album-placeholder { width: 64px; height: 64px; }
+.media-view .transport { margin-top: 8px; }
+.media-view .transport .icon-button { width: 38px; height: 38px; }
+.media-view .play-button { width: 44px; height: 44px; }
+.module-error { padding: 5px 8px; margin-bottom: 4px; }
+.module-error > p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: clip;
+}
+.island.preview .island-launcher {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 4px;
+  padding: 6px 9px 8px;
+}
+.peek-content {
+  height: auto;
+  min-height: 0;
+  gap: 10px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: 13px;
+  background: transparent;
+  justify-content: flex-start;
+  text-align: left;
+}
+.peek-module-icon {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  background: var(--control);
+}
+.peek-copy {
+  display: grid;
+  flex: 1;
+  gap: 2px;
+  min-width: 0;
+}
+.peek-copy strong { font-size: 14px; font-weight: 600; }
+.peek-copy .peek-caption { font-size: 10px; color: var(--secondary); }
+.peek-arrow { color: var(--secondary); }
+.island.preview .media-peek { gap: 12px; }
+.media-peek .album-placeholder { width: 46px; height: 46px; border-radius: 10px; }
+.island-launcher .media-peek .album-placeholder svg { width: 20px; height: 20px; }
+.media-peek .visualizer-bars { margin-inline: 3px; }
+.island.preview .activity-links {
+  gap: 6px;
+  padding: 0;
+}
+.island.preview .activity-links > button {
+  flex: 1;
+  justify-content: flex-start;
+  gap: 6px;
+  min-width: 0;
+  min-height: 34px;
+  padding: 0 8px;
+  border-radius: 10px;
+  font-size: 11px;
+}
+.island.preview .activity-links > .activity-timer:not(:only-child) { flex: 0 1 auto; max-width: 42%; }
+.peek-copy strong,
+.peek-caption,
+.peek-activity-label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.island.preview .activity-links .visualizer-bars { margin-left: auto; }
+.error-toast span,
+.setting-row > span {
+  min-width: 0;
+}
+.compact-content:focus-visible,
+.peek-content:focus-visible {
+  outline-offset: -4px;
+}
+.module-error,
+.error-message,
+.warning-message {
+  overflow-wrap: anywhere;
+}
+.panel-body > .empty-state {
+  min-height: 0;
+  overflow: auto;
+}
+.island .error-toast {
+  position: relative;
+  top: auto;
+  bottom: auto;
+  left: auto;
+  transform: none;
+  width: calc(100% - 24px);
+  margin: 0 12px 8px;
+  padding: 6px 10px;
+  flex-shrink: 0;
+  max-height: min(88px, 28%);
+  overflow: clip;
+  align-items: flex-start;
+  z-index: 5;
+}
+.error-toast span {
+  overflow-wrap: anywhere;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: clip;
+}
+.error-toast .icon-button {
+  position: sticky;
+  top: 0;
+}
+html[data-host=native][data-surface=settings] {
+  overflow-y: auto;
+  background: var(--surface);
+}
+html[data-host=native][data-surface=settings] body,
+html[data-host=native][data-surface=settings] #root {
+  height: auto;
+  min-height: 100%;
+  overflow: visible;
+}
+.settings-page > header {
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.file-artwork { display: grid; place-items: center; width: 24px; min-width: 24px; }
+.file-artwork:has(img, .file-excerpt) { width: 38px; min-width: 38px; }
+.file-artwork img { display: block; width: 38px; height: 32px; object-fit: contain; border-radius: 4px; }
+.file-excerpt { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; overflow-wrap: anywhere; font-size: 7px; line-height: 9px; color: var(--secondary); }
+.preview-host .island.open:has(.timer-calendar-layout) { width: min(600px, calc(100vw - 32px)); height: 390px; }
+.timer-module { container: timer-layout / size; }
+.timer-calendar-layout { display: grid; align-items: start; gap: 16px; }
+.timer-calendar-layout > * { min-width: 0; }
+.timer-layout-toggle { display: none; }
+@container (width < 500px) {
+  .timer-layout-toggle { display: flex; margin-bottom: 6px; }
+  .timer-layout-toggle button { min-height: 23px; }
+  .timer-calendar-layout:not(.show-calendar) > .month-calendar,
+  .timer-calendar-layout.show-calendar > .timer-controls-column { display: none; }
+  .timer-view .timer-ring { width: 66px; height: 66px; }
+}
+@container (min-width: 500px) {
+  .timer-calendar-layout { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+}
+.timer-presets { display: flex; justify-content: center; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
+.timer-presets button { min-height: 23px; padding: 2px 6px; font-size: 10px; }
+.timer-presets button[aria-pressed="true"] { color: var(--accent); border-color: var(--accent); }
+.month-calendar { padding: 8px; border: 1px solid var(--line); border-radius: 12px; }
+.month-calendar header { display: flex; align-items: center; gap: 4px; margin-bottom: 8px; }
+.month-calendar header strong { flex: 1; min-width: 0; text-align: center; font-size: 12px; }
+.month-calendar header button { min-height: 26px; padding: 2px 6px; font-size: 10px; }
+.month-calendar header .icon-button { width: 26px; height: 26px; }
+.calendar-grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 2px; text-align: center; }
+.calendar-weekday { color: var(--secondary); font-size: 10px; }
+.calendar-grid button { min-height: 24px; padding: 0; border-color: transparent; background: transparent; font-size: 11px; }
+.calendar-grid button[aria-current="date"] { color: var(--accent); }
+.calendar-grid button[aria-pressed="true"] { border-color: var(--accent); }
+.mixer-item { display: flex; align-items: center; gap: 6px; }
+.mixer-item > label, .usb-devices li { min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.mixer-item > label { flex: 1; }
+.mixer-item input { display: block; }
+@media (max-height: 500px) {
+  .preview-tools {
+    position: static;
+    order: 1;
+    margin: 24px 16px 16px;
+    align-self: flex-start;
+  }
+}
+/* A compact target keeps the complete instruction visible even when a large
+   top gap leaves only a short panel above the fixed module navigation. */
+@media (max-height: 300px) {
+  .island.open:has(.timer-module) .panel-body { padding: 6px 10px 0; }
+}
+@container timer-layout (max-height: 250px) {
+  .timer-layout-toggle { margin-bottom: 3px; }
+  .timer-view {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 44px;
+    gap: 2px 5px;
+  }
+  .timer-view .segments { grid-column: 1; }
+  .timer-view .timer-duration { grid-column: 1; margin: 0; }
+  .timer-view .timer-presets, .timer-view .timer-actions, .timer-view .availability { grid-column: 1 / -1; margin: 0; }
+  .timer-view .timer-presets button { min-height: 20px; }
+  .timer-view .timer-actions button { min-height: 26px; padding-block: 3px; }
+  .timer-view .timer-ring { grid-area: 1 / 2 / span 2; width: 42px; height: 42px; margin: 0; padding: 2px; align-self: center; }
+  .timer-view .timer-ring span { font-size: 10px; }
+  .timer-module .month-calendar { padding: 3px; }
+  .timer-module .month-calendar header { margin-bottom: 3px; }
+  .timer-module .month-calendar header button { min-height: 18px; height: 18px; }
+  .timer-module .calendar-grid { gap: 1px; }
+  .timer-module .calendar-grid button { min-height: 13px; font-size: 10px; }
+}
