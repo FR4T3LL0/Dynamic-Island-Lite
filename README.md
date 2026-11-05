@@ -1,27 +1,38 @@
 # Dynamic Island Lite
 
-Eigenständige Windows-x64-App auf Basis von Dynamic Island. Die Uhr öffnet und schließt den Kalender mit Countdown und Pomodoro. Das Cover oder die Medienvorschau öffnet den Player mit Titelsteuerung, Lautstärke, Visualizer und optionalem Cover-Farbakzent. Smart, Peek, feste oder federnde Uhr und die vorhandenen Statusoptionen gehören zu Lite.
+English · [Deutsch](README.de.md)
 
-Lite verwendet das Profil `app.dynamicisland.lite`, eine eigene Installation und ein eigenes Standardkürzel `Strg+Alt+Umschalt+I`. Einstellungen werden beim ersten Start mit Lite-Standardwerten angelegt.
+A compact desktop overlay for Windows x64. Open the media player from the cover or media preview, or click the clock to access the calendar, countdown and Pomodoro timer.
 
-## Installieren und aktualisieren
+<p>
+  <img src="docs/images/player.png" alt="Dynamic Island Lite media player with demo track and playback controls" width="300">
+  <img src="docs/images/calendar.png" alt="Dynamic Island Lite calendar open to April 2026" width="300">
+</p>
 
-Für die Installation muss die [Microsoft Edge WebView2 Evergreen Runtime](https://learn.microsoft.com/de-de/microsoft-edge/webview2/concepts/distribution) bereits verfügbar sein. Setup und Deinstallation werden im eigenen Windows-Konto mit normalen Benutzerrechten ausgeführt.
+The screenshots show the German interface with demo data.
 
-Beim ersten Start der installierten App mit einem neuen Lite-Profil ist der Windows-Autostart standardmäßig aktiv. Du kannst ihn in den Einstellungen unter **Mit Windows starten** deaktivieren.
+## Install
 
-Dieses Setup registriert die Lite-App-Kennung für spätere Updates. Solche Updates ersetzen die Dateien im selben Installationsordner und behalten App-Daten und Autostart bei. Wähle einen zuvor selbst gewählten Ordner beim Update erneut aus. Deinstalliere ältere Lite-Versionen aus der Zeit vor dieser Registrierung und Installationen mit einer anderen App-Kennung zuerst über Windows. Für einen Ordnerwechsel ist ebenfalls eine vorherige Deinstallation nötig. Die Deinstallation bietet eine eigene Auswahl zum Löschen der App-Daten.
+1. Make sure [Microsoft Edge WebView2 Evergreen Runtime](https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/distribution) is installed.
+2. Download the Windows x64 setup from [Releases](https://github.com/FR4T3LL0/Dynamic-Island-Lite/releases) and run it from your Windows account.
 
-## Lokal bauen
+Press **Ctrl+Alt+Shift+I** to open the overlay. New profiles start with Windows by default. Turn this off under **Mit Windows starten** in Settings.
 
-Unter Windows x64 mit Node.js 22.12 oder neuer, Rust 1.96 und den MSVC-Buildtools im Projektordner ausführen.
+For updates, select the same installation folder to keep your app data and autostart settings. Uninstall the existing copy first if it predates setup registration, uses a different app ID or needs to move to another folder. The uninstaller gives you a separate option to delete app data.
+
+## Build from source
+
+On Windows x64 with Node.js 22.12+, Rust 1.96+ and MSVC Build Tools, use the following commands.
 
 ```powershell
 npm.cmd ci
 npm.cmd run app:build
 ```
 
-Der Installer liegt anschließend unter `src-tauri/target/release/bundle/nsis`.
+The installer is created in `src-tauri/target/release/bundle/nsis`.
+
+<details>
+<summary>Development checks</summary>
 
 ```powershell
 npm.cmd run lint
@@ -29,6 +40,8 @@ npm.cmd run test:unit
 cargo test --manifest-path src-tauri/Cargo.toml --workspace --locked --features custom-protocol
 ```
 
-## Lizenz
+</details>
 
-Der Projektcode steht unter der [MIT-Lizenz](LICENSE). Die [Drittanbieterhinweise](src-tauri/windows/third-party/THIRD-PARTY-NOTICES.md) dokumentieren die gesonderten Lizenzen.
+## License
+
+[MIT](LICENSE) · [Third-party notices](src-tauri/windows/third-party/THIRD-PARTY-NOTICES.md)
