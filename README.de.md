@@ -7,11 +7,11 @@
 Eine kompakte Desktop-Leiste für Windows x64. Über das Cover oder die Medienvorschau öffnest du den Player. Ein Klick auf die Uhr öffnet Kalender, Countdown und Pomodoro-Timer.
 
 <p>
-  <img src="docs/images/player.png" alt="Mediaplayer von Dynamic Island Lite mit Beispieltitel und Wiedergabesteuerung" width="300">
+  <img src="docs/images/hover-player.gif" alt="Mauszeiger öffnet beim Hover die Medienvorschau mit Beispieltitel und per Klick den Player" width="300">
   <img src="docs/images/calendar.png" alt="Kalender von Dynamic Island Lite im April 2026" width="300">
 </p>
 
-Die Bilder zeigen die Oberfläche mit Beispieldaten.
+Die Beispiele zeigen die Oberfläche mit Demo-Daten.
 
 ## Installieren
 

@@ -7,11 +7,11 @@ English · [Deutsch](README.de.md)
 A compact desktop overlay for Windows x64. Open the media player from the cover or media preview, or click the clock to access the calendar, countdown and Pomodoro timer.
 
 <p>
-  <img src="docs/images/player.png" alt="Dynamic Island Lite media player with demo track and playback controls" width="300">
+  <img src="docs/images/hover-player.gif" alt="Pointer hovers over Dynamic Island Lite to reveal a demo track and clicks to open the player" width="300">
   <img src="docs/images/calendar.png" alt="Dynamic Island Lite calendar open to April 2026" width="300">
 </p>
 
-The screenshots show the German interface with demo data.
+The examples show the German interface with demo data.
 
 ## Install
 
