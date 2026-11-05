@@ -4,14 +4,27 @@ English · [Deutsch](README.de.md)
 
 **[Download the Windows x64 installer (v1.0.0-alpha.4)](https://github.com/FR4T3LL0/Dynamic-Island-Lite/releases/download/v1.0.0-alpha.4/DynamicIslandLite_1.0.0-alpha.4_x64-setup.exe)**
 
-A compact desktop overlay for Windows x64. Open the media player from the cover or media preview, or click the clock to access the calendar, countdown and Pomodoro timer.
+A compact overlay at the top of your screen on Windows x64.
 
-<p>
-  <img src="docs/images/hover-player.gif" alt="Pointer hovers over Dynamic Island Lite to reveal a demo track and clicks to open the player" width="300">
-  <img src="docs/images/calendar.png" alt="Dynamic Island Lite calendar open to April 2026" width="300">
-</p>
+## Features
 
-The examples show the German interface with demo data.
+### Media controls
+
+Hover over the island to see the current track. Click the preview to open the player, control playback and volume, and use the optional visualizer.
+
+<img src="docs/images/hover-player.gif" alt="The pointer hovers over the island to show a sample track, then clicks to open the player" width="480">
+
+### Calendar and focus
+
+Click the clock to open the monthly calendar. Set a countdown or switch to Pomodoro for focus sessions and breaks.
+
+<img src="docs/images/calendar-pomodoro.gif" alt="The pointer clicks the clock to open the calendar, then selects Pomodoro" width="480">
+
+Both demos show the German interface with sample data.
+
+### Display and controls
+
+Choose a monitor, adjust how the clock moves and set a keyboard shortcut. Smart and Peek let you choose when the island appears.
 
 ## Install
 

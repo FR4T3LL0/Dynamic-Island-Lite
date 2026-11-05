@@ -4,14 +4,27 @@
 
 **[Windows-x64-Installer herunterladen (v1.0.0-alpha.4)](https://github.com/FR4T3LL0/Dynamic-Island-Lite/releases/download/v1.0.0-alpha.4/DynamicIslandLite_1.0.0-alpha.4_x64-setup.exe)**
 
-Eine kompakte Desktop-Leiste für Windows x64. Über das Cover oder die Medienvorschau öffnest du den Player. Ein Klick auf die Uhr öffnet Kalender, Countdown und Pomodoro-Timer.
+Eine kompakte Leiste am oberen Bildschirmrand für Windows x64.
 
-<p>
-  <img src="docs/images/hover-player.gif" alt="Mauszeiger öffnet beim Hover die Medienvorschau mit Beispieltitel und per Klick den Player" width="300">
-  <img src="docs/images/calendar.png" alt="Kalender von Dynamic Island Lite im April 2026" width="300">
-</p>
+## Funktionen
 
-Die Beispiele zeigen die Oberfläche mit Demo-Daten.
+### Medien steuern
+
+Fahre mit der Maus über die Leiste, um den aktuellen Titel zu sehen. Ein Klick auf die Vorschau öffnet den Player. Dort kannst du die Wiedergabe steuern, die Lautstärke ändern und den optionalen Visualizer nutzen.
+
+<img src="docs/images/hover-player.gif" alt="Der Mauszeiger blendet per Hover den Beispieltitel ein und öffnet per Klick den Player" width="480">
+
+### Kalender und Timer
+
+Klicke auf die Uhr, um den Monatskalender zu öffnen. Stelle einen Countdown ein oder wechsle für Fokusphasen und Pausen zu Pomodoro.
+
+<img src="docs/images/calendar-pomodoro.gif" alt="Der Mauszeiger öffnet per Klick auf die Uhr den Kalender und wählt dann Pomodoro" width="480">
+
+Beide Demos verwenden Beispieldaten.
+
+### Anzeige und Bedienung
+
+Wähle den Monitor, die Bewegung der Uhr und ein Tastenkürzel. Mit Smart und Peek stellst du ein, wann die Leiste erscheint.
 
 ## Installieren
 
