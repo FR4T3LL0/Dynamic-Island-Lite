@@ -2,6 +2,8 @@
 
 [English](README.md) · Deutsch
 
+**[Windows-x64-Installer herunterladen (v1.0.0-alpha.4)](https://github.com/FR4T3LL0/Dynamic-Island-Lite/releases/download/v1.0.0-alpha.4/DynamicIslandLite_1.0.0-alpha.4_x64-setup.exe)**
+
 Eine kompakte Desktop-Leiste für Windows x64. Über das Cover oder die Medienvorschau öffnest du den Player. Ein Klick auf die Uhr öffnet Kalender, Countdown und Pomodoro-Timer.
 
 <p>

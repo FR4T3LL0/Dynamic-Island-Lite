@@ -2,6 +2,8 @@
 
 English · [Deutsch](README.de.md)
 
+**[Download the Windows x64 installer (v1.0.0-alpha.4)](https://github.com/FR4T3LL0/Dynamic-Island-Lite/releases/download/v1.0.0-alpha.4/DynamicIslandLite_1.0.0-alpha.4_x64-setup.exe)**
+
 A compact desktop overlay for Windows x64. Open the media player from the cover or media preview, or click the clock to access the calendar, countdown and Pomodoro timer.
 
 <p>
